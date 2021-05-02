@@ -41,7 +41,7 @@ namespace Lekodex.Core.Mappers
 
         public IEnumerable<PrescriptionDto> Map(IEnumerable<Prescription> prescriptions) => mMapper.Map<IEnumerable<PrescriptionDto>>(prescriptions);
 
-        public Medicine Map(PrescriptionDto prescription) => mMapper.Map<Medicine>(prescription);
+        public Prescription Map(PrescriptionDto prescription) => mMapper.Map<Prescription>(prescription);
 
         public IEnumerable<Prescription> Map(IEnumerable<PrescriptionDto> prescriptions) => mMapper.Map<IEnumerable<Prescription>>(prescriptions);
         #endregion
