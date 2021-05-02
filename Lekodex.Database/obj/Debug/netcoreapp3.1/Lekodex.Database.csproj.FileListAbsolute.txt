@@ -1,0 +1,12 @@
+C:\Users\adaml\source\repos\Lekodex\Lekodex.Database\bin\Debug\netcoreapp3.1\Lekodex.Database.deps.json
+C:\Users\adaml\source\repos\Lekodex\Lekodex.Database\bin\Debug\netcoreapp3.1\Lekodex.Database.dll
+C:\Users\adaml\source\repos\Lekodex\Lekodex.Database\bin\Debug\netcoreapp3.1\Lekodex.Database.pdb
+C:\Users\adaml\source\repos\Lekodex\Lekodex.Database\obj\Debug\netcoreapp3.1\Lekodex.Database.csprojAssemblyReference.cache
+C:\Users\adaml\source\repos\Lekodex\Lekodex.Database\obj\Debug\netcoreapp3.1\Lekodex.Database.AssemblyInfoInputs.cache
+C:\Users\adaml\source\repos\Lekodex\Lekodex.Database\obj\Debug\netcoreapp3.1\Lekodex.Database.AssemblyInfo.cs
+C:\Users\adaml\source\repos\Lekodex\Lekodex.Database\obj\Debug\netcoreapp3.1\Lekodex.Database.csproj.CoreCompileInputs.cache
+C:\Users\adaml\source\repos\Lekodex\Lekodex.Database\obj\Debug\netcoreapp3.1\Lekodex.Database.dll
+C:\Users\adaml\source\repos\Lekodex\Lekodex.Database\obj\Debug\netcoreapp3.1\Lekodex.Database.pdb
+C:\Users\adaml\source\repos\Lekodex\Lekodex.Database\bin\Debug\netcoreapp3.1\Lekodex.Database.runtimeconfig.json
+C:\Users\adaml\source\repos\Lekodex\Lekodex.Database\bin\Debug\netcoreapp3.1\Lekodex.Database.runtimeconfig.dev.json
+C:\Users\adaml\source\repos\Lekodex\Lekodex.Database\obj\Debug\netcoreapp3.1\Lekodex.Database.genruntimeconfig.cache
