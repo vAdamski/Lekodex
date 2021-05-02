@@ -76,7 +76,14 @@ namespace Lekodex.Core
 
             entity.DoctorId = doctorId;
 
-            mMedicineRepository.AddNew(entity);
+            mPrescriptionRepository.AddNew(entity);
+        }
+
+        public void AddNewDoctor(DoctorDto doctor)
+        {
+            var entity = mDoctorsMapper.Map(doctor);
+
+            mDoctorRepository.AddNew(entity);
         }
     }
 }

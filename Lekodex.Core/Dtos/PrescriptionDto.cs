@@ -12,7 +12,7 @@ namespace Lekodex.Core
 
         public DateTime CreateDate { get; set; }
 
-        public  DoctorDto Doctor { get; set; }
+        public DoctorDto Doctor { get; set; }
 
         public List<MedicineDto> Medicines { get; set; }
     }
