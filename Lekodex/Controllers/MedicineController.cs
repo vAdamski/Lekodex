@@ -1,4 +1,4 @@
-﻿using Lekodex.Models;
+﻿using Lekodex.Core;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,30 +11,27 @@ namespace Lekodex.Controllers
 {
     public class MedicineController : Controller
     {
-        private int IndexOfDoctor { get; set; }
-        private int IndexOfPrescription { get; set; }
+        private readonly IDoctorManager mDoctorManager;
+        private readonly ViewModelMapper mViewModelMapper;
 
-
-        public MedicineController()
+        public MedicineController(IDoctorManager doctorManager, ViewModelMapper viewModelMapper)
         {
+            mDoctorManager = doctorManager;
+            mViewModelMapper = viewModelMapper;
         }
 
-        public IActionResult Index(int indexOfDoctor, int indexOfPrescription, string filterString)
+        public IActionResult Index(int doctorId, int prescriptionId, string filterString)
         {
-            IndexOfDoctor = indexOfDoctor;
-            IndexOfPrescription = indexOfPrescription;
+            TempData["PrescriptionId"] = prescriptionId;
+            TempData["DoctorId"] = doctorId;
 
-            if (string.IsNullOrEmpty(filterString))
-            {
-                return View(TestDatabasePleaseDelete.Doctors.ElementAt(indexOfDoctor).Prescriptions.ElementAt(indexOfPrescription));
-            }
+            var prescriptionDto = mDoctorManager.GetAllPrescriptionsForADoctor(doctorId, null).FirstOrDefault(x => x.Id == prescriptionId);
+            var medicineDtos = mDoctorManager.GetAllMedicineForAPrescription(prescriptionId, filterString);
 
+            var prescriptionViewModel = mViewModelMapper.Map(prescriptionDto);
+            prescriptionViewModel.Medicines = mViewModelMapper.Map(medicineDtos);
 
-            return View(new PrescriptionViewModel
-            {
-                Name = TestDatabasePleaseDelete.Doctors.ElementAt(indexOfDoctor).Prescriptions.ElementAt(indexOfPrescription).Name,
-                Medicines = TestDatabasePleaseDelete.Doctors.ElementAt(indexOfDoctor).Prescriptions.ElementAt(indexOfPrescription).Medicines.Where(x => x.Name.Contains(filterString)).ToList()
-            });
+            return View(prescriptionViewModel);
         }
         public IActionResult Add()
         {
@@ -44,13 +41,17 @@ namespace Lekodex.Controllers
         [HttpPost]
         public IActionResult Add(MedicineViewModel medicineViewModel)
         {
-            TestDatabasePleaseDelete.Doctors.ElementAt(IndexOfDoctor).Prescriptions.ElementAt(IndexOfPrescription).Medicines.Add(medicineViewModel);
+            var dto = mViewModelMapper.Map(medicineViewModel);
 
-            return RedirectToAction("Index");
+            mDoctorManager.AddNewMedicine(dto, int.Parse(TempData["PrescriptionId"].ToString()));
+
+            return RedirectToAction("Index", new { doctorId = int.Parse(TempData["DoctorId"].ToString()), prescriptionId = int.Parse(TempData["PrescriptionId"].ToString()) });
         }
-        public IActionResult Delete(int indexOfMedicine)
+        public IActionResult Delete(int medicineId)
         {
-            return View();
+            mDoctorManager.DeleteMedicine(new MedicineDto { Id = medicineId});
+
+            return RedirectToAction("Index", new { doctorId = int.Parse(TempData["DoctorId"].ToString()), prescriptionId = int.Parse(TempData["PrescriptionId"].ToString()) });
         }
     }
 }

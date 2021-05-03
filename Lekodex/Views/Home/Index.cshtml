@@ -16,10 +16,22 @@
         <thead>
             <tr>
                 <th scope="col">
-                    #
+                    Id
                 </th>
                 <th scope="col">
-                    Name
+                    First Name
+                </th>
+                <th scope="col">
+                    Last Name
+                </th>
+                <th scope="col">
+                    Phone Number
+                </th>
+                <th scope="col">
+                    Work Years
+                </th>
+                <th scope="col">
+                    Is Able To Make Prescription
                 </th>
                 <th scope="col">
                     Actions
@@ -30,12 +42,16 @@
             @foreach(var doctor in Model)
             {
                 <tr>
-                    <th scope="row">@(Model.IndexOf(doctor)+1)</th>
-                    <td>@doctor.Name</td>
+                    <th scope="row">@doctor.Id</th>
+                    <td>@doctor.FirstName</td>
+                    <td>@doctor.LastName</td>
+                    <td>@doctor.PhoneNumber</td>
+                    <td>@doctor.WorkYears</td>
+                    <td>@doctor.IsAbleToMakePrescription</td>
                     <td>
-                        <a asp-area="" asp-controller="Home" asp-action="View" asp-route-indexOfDoctor="@Model.IndexOf(doctor)">View</a>
+                        <a asp-area="" asp-controller="Home" asp-action="View" asp-route-doctorId="@doctor.Id">View</a>
                         |
-                        <a asp-area="" asp-controller="Home" asp-action="Delete" asp-route-indexOfDoctor="@Model.IndexOf(doctor)">Delete</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Delete" asp-route-doctorId="@doctor.Id">Delete</a>
                     </td>
                 </tr>
             }

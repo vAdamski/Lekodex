@@ -18,6 +18,6 @@ namespace Lekodex.Core
 
         public bool IsAbleToMakePrescription { get; set; }
 
-        public List<PrescriptionDto> Prescriptions { get; set; }
+        public IEnumerable<PrescriptionDto> Prescriptions { get; set; }
     }
 }

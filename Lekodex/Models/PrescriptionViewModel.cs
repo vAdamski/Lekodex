@@ -7,7 +7,14 @@ namespace Lekodex
 {
     public class PrescriptionViewModel
     {
+        public int Id { get; set; }
+
         public string Name { get; set; }
-        public List<MedicineViewModel> Medicines { get; set; }
+
+        public DateTime CreateDate { get; set; }
+
+        public DoctorViewModel Doctor { get; set; }
+
+        public IEnumerable<MedicineViewModel> Medicines { get; set; }
     }
 }

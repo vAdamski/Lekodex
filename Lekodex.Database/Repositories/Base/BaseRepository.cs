@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Lekodex.Database
 {
-    public abstract class BaseRepository<Entity> where Entity : BaseEntity
+    public abstract class BaseRepository<Entity> : IRepository<Entity> where Entity : BaseEntity
     {
         protected LekodexAppDbContext mDbContext;
         protected abstract DbSet<Entity> DbSet { get; }

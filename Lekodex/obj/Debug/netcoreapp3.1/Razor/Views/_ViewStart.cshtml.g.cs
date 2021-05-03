@@ -19,15 +19,8 @@ using Lekodex;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "C:\Users\adaml\source\repos\Lekodex\Lekodex\Views\_ViewImports.cshtml"
-using Lekodex.Models;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2245b60895ee3dc7e60eb3e5a84d908fb42bfdb8", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"47b7f6d7d1886af8d92f6b7a99189ef04a34cef4", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
