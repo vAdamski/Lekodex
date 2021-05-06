@@ -9,7 +9,8 @@
       "Lekodex.Core/1.0.0": {
         "dependencies": {
           "AutoMapper": "10.1.1",
-          "Lekodex.Database": "1.0.0"
+          "Lekodex.Database": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.5"
         },
         "runtime": {
           "Lekodex.Core.dll": {}

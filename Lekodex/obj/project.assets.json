@@ -1520,7 +1520,8 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "AutoMapper": "10.1.1",
-          "Lekodex.Database": "1.0.0"
+          "Lekodex.Database": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.5"
         },
         "compile": {
           "bin/placeholder/Lekodex.Core.dll": {}
@@ -5835,38 +5836,37 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Lekodex.Core >= 1.0.0",
+      "Microsoft.EntityFrameworkCore >= 5.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.5"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adaml\\.nuget\\packages\\": {}
+    "/Users/adamski/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adaml\\source\\repos\\Lekodex\\Lekodex\\Lekodex.csproj",
+      "projectUniqueName": "/Users/adamski/Projects/Lekodex/Lekodex/Lekodex.csproj",
       "projectName": "Lekodex",
-      "projectPath": "C:\\Users\\adaml\\source\\repos\\Lekodex\\Lekodex\\Lekodex.csproj",
-      "packagesPath": "C:\\Users\\adaml\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adaml\\source\\repos\\Lekodex\\Lekodex\\obj\\",
+      "projectPath": "/Users/adamski/Projects/Lekodex/Lekodex/Lekodex.csproj",
+      "packagesPath": "/Users/adamski/.nuget/packages/",
+      "outputPath": "/Users/adamski/Projects/Lekodex/Lekodex/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\adaml\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/adamski/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\adaml\\source\\repos\\Lekodex\\Lekodex.Core\\Lekodex.Core.csproj": {
-              "projectPath": "C:\\Users\\adaml\\source\\repos\\Lekodex\\Lekodex.Core\\Lekodex.Core.csproj"
+            "/Users/adamski/Projects/Lekodex/Lekodex.Core/Lekodex.Core.csproj": {
+              "projectPath": "/Users/adamski/Projects/Lekodex/Lekodex.Core/Lekodex.Core.csproj"
             }
           }
         }
@@ -5881,6 +5881,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[5.0.5, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -5906,7 +5910,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.103/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -8,14 +8,7 @@
       "TRACE",
       "DEBUG",
       "NETCOREAPP",
-      "NETCOREAPP3_1",
-      "NETCOREAPP1_0_OR_GREATER",
-      "NETCOREAPP1_1_OR_GREATER",
-      "NETCOREAPP2_0_OR_GREATER",
-      "NETCOREAPP2_1_OR_GREATER",
-      "NETCOREAPP2_2_OR_GREATER",
-      "NETCOREAPP3_0_OR_GREATER",
-      "NETCOREAPP3_1_OR_GREATER"
+      "NETCOREAPP3_1"
     ],
     "languageVersion": "8.0",
     "platform": "",
@@ -32,6 +25,7 @@
       "Lekodex/1.0.0": {
         "dependencies": {
           "Lekodex.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore.Design": "5.0.5",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -1400,7 +1394,8 @@
       "Lekodex.Core/1.0.0": {
         "dependencies": {
           "AutoMapper": "10.1.1",
-          "Lekodex.Database": "1.0.0"
+          "Lekodex.Database": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.5"
         },
         "runtime": {
           "Lekodex.Core.dll": {}

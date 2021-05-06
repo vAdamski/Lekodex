@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{A3761545-B5A3-4A8C-8216-63A8743176B6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Lekodex/Startup.cs">
+    <Files>
+      <File FileName="Lekodex/Startup.cs" Line="73" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Lekodex" expanded="True">
+            <Node name="Lekodex" expanded="True">
+              <Node name="Startup.cs" selected="True" />
+            </Node>
+            <Node name="Lekodex.Database" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Lekodex PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
